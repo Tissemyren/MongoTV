@@ -8,7 +8,13 @@
     {
         "word": "bummelum",
         "variants": [],
-        "definition": "Lort.",
+        "definition": "(For det meste) brunt kropsstof, der hos nogle mennesker godt kan være meget flydende.",
+        "example": "Jeg har sur mave, og jeg laver bummelum virkelig meget i dag."
+    },
+    {
+        "word": "lænssssch",
+        "variants": ["unload some water", "nummer 1"],
+        "definition": ".",
         "example": "Jeg har sur mave, og min bummelum er flydende."
     },
     {
@@ -16,5 +22,29 @@
         "variants": ["number 1"],
         "definition": "Det at lukke tis ud af kroppen.",
         "example": "Jeg skal på toilet og lave nummer 1."
+    },
+    {
+        "word": "nummer 2",
+        "variants": ["number 2"],
+        "definition": "Det at lukke bummelum (på toilettet).",
+        "example": "Jeg skal på toilet og lave nummer 2."
+    },
+    {
+        "word": "friværdimillionær",
+        "variants": [],
+        "definition": "En person, der har success og derfor giver visse folk meget ondt i røven.",
+        "example": "De der skide friværdimillionærer bor gratis i hus og får 10 millioner."
+    },
+    {
+        "word": "HF-uddannelse",
+        "variants": [],
+        "definition": "En uddannelse, som man fuldfører uden at kunne fremvise bevis, fordi ens gamle ven rev det i stykker.",
+        "example": "Jeg har altså gennemført en HF, og jeg kan derfor godt finde ud af at bruge en lommeregner."
+    },
+    {
+        "word": "forskerniveau",
+        "variants": [],
+        "definition": "Det at være ekstremt dårlig og slet ikke vide noget om et specifikt emne.",
+        "example": "\"Jeg læser altså engelsk på forskningsniveau\" sagde manden, der ikke kunne udtale \"sour cream and onion\"."
     }
 ]
