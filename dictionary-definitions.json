@@ -26,7 +26,7 @@
     {
         "word": "nummer 2",
         "variants": ["number 2"],
-        "definition": "Det at lukke bummelum (på toilettet).",
+        "definition": "Det at lukke bummelum ud af kroppen - ofte i kælderen.",
         "example": "Jeg skal på toilet og lave nummer 2."
     },
     {
@@ -76,5 +76,11 @@
         "variants": [],
         "definition": "De gratis penge alle boligejerne får hele tiden, så gamle førtidspensionister skal lide.",
         "example": "De små egoistiske, pengegriske friværdimillionærer køber svævefly til deres børn, der."
+    },
+    {
+        "word": "unload som water",
+        "variants": ["unloading water"],
+        "definition": "To take a piss.",
+        "example": "."
     }
 ]

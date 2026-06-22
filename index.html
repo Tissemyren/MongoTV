@@ -14,14 +14,20 @@
         <button id="theme-toggle">Skift tema</button>
     </div>
 
-    <script src="main.js"></script>
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Søg efter ord eller variant...">
+    </div>
     
     <div id="dictionary-container"></div>
 
+    <script src="main.js"></script>
+
     <script>
         const container = document.getElementById('dictionary-container');
+        const searchInput = document.getElementById('search-input');
 
-        // Fetch the external JSON file
+        let dictionaryData = [];
+
         fetch('dictionary-definitions.json')
             .then(response => {
                 if (!response.ok) {
@@ -29,30 +35,60 @@
                 }
                 return response.json();
             })
-            .then(dictionaryData => {
-                // Loop through the data exactly like before
-                dictionaryData.forEach(entry => {
-                    const entryDiv = document.createElement('div');
-                    entryDiv.className = 'dictionary-entry';
-
-                    const variantsText = entry.variants.length > 0 
-                        ? `<div class="variants">Variant(er): ${entry.variants.join(', ')}</div>` 
-                        : '';
-
-                    entryDiv.innerHTML = `
-                        <h2 class="word">${entry.word}</h2>
-                        ${variantsText}
-                        <p class="definition">${entry.definition}</p>
-                        <p class="example"><strong>Eksempel:</strong> ${entry.example}</p>
-                    `;
-
-                    container.appendChild(entryDiv);
-                });
+            .then(data => {
+                dictionaryData = data; // Store data globally
+                displayEntries(dictionaryData); // Display all entries initially
             })
             .catch(error => {
                 console.error('Fejl:', error);
                 container.innerHTML = `<p style="color:red;">Der skete en fejl under indlæsning af ordbogen.</p>`;
             });
+
+        function displayEntries(entries) {
+            container.innerHTML = '';
+
+            if (entries.length === 0) {
+                container.innerHTML = '<p>Ingen resultater fundet.</p>';
+                return;
+            }
+
+            entries.forEach(entry => {
+                const entryDiv = document.createElement('div');
+                entryDiv.className = 'dictionary-entry';
+
+                const variantsText = entry.variants.length > 0 
+                    ? `<div class="variants">Variant(er): ${entry.variants.join(', ')}</div>` 
+                    : '';
+
+                entryDiv.innerHTML = `
+                    <h2 class="word">${entry.word}</h2>
+                    ${variantsText}
+                    <p class="definition">${entry.definition}</p>
+                    <p class="example"><strong>Eksempel:</strong> ${entry.example}</p>
+                `;
+
+                container.appendChild(entryDiv);
+            });
+        }
+
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase().trim();
+
+            const filteredEntries = dictionaryData.filter(entry => {
+                // Check if the word matches
+                const matchesWord = entry.word.toLowerCase().includes(searchTerm);
+                
+                // Check if any of the variants match
+                const matchesVariant = entry.variants.some(variant => 
+                    variant.toLowerCase().includes(searchTerm)
+                );
+
+                // Return true if either the word OR a variant matches
+                return matchesWord || matchesVariant;
+            });
+
+            displayEntries(filteredEntries);
+        });
     </script>
 </body>
 </html>
