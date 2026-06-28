@@ -36,6 +36,12 @@
         "example": "De der skide friværdimillionærer bor gratis i hus og får 10 millioner."
     },
     {
+        "word": "pensionsmillionær",
+        "variants": [],
+        "definition": "En person, der har over en million på pensionsopsparingen.",
+        "example": "De der dumme boligejere er nok allesammen pensionsmillionære."
+    },
+    {
         "word": "HF-uddannelse",
         "variants": [],
         "definition": "En uddannelse, som man fuldfører uden at kunne fremvise bevis, fordi ens gamle ven rev det i stykker.",
@@ -78,6 +84,12 @@
         "example": "De små egoistiske, pengegriske friværdimillionærer køber svævefly til deres børn, der."
     },
     {
+        "word": "BOB",
+        "variants": ["bad og barbering"],
+        "definition": "Det at tage et \"bad\" (og glemme og vaske sig under armene) og derefter barbere sig.",
+        "example": "Manden tog en BOB men hørmede stadig."
+    },
+    {
         "word": "star citizen",
         "variants": [],
         "definition": "At seksuelt tilfredsstille sig selv.",
@@ -94,5 +106,11 @@
         "variants": [],
         "definition": "A dairy product usually eaten with a big portion of pasta and mustard.",
         "example": "The man threw the tjids out 2 days before expiring because of his diarrhea."
+    },
+    {
+        "word": "SAS",
+        "variants": ["shower and a shaving"],
+        "definition": "To take a \"shower\" (and forget to clean your armpits) and then shave.",
+        "example": "The man took a SAS, but the body oder was still horrible."
     }
 ]

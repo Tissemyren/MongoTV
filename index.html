@@ -38,8 +38,8 @@
                 return response.json();
             })
             .then(data => {
-                dictionaryData = data; // Store data globally
-                displayEntries(dictionaryData); // Display all entries initially
+                dictionaryData = data;
+                displayEntries(dictionaryData);
             })
             .catch(error => {
                 console.error('Fejl:', error);
